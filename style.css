@@ -1,0 +1,29 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    background-color: #1b1b1b;
+}
+
+#coin-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.coin {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background-image: url('coin.png'); /* Replace with an actual coin image URL */
+    background-size: cover;
+    top: -30px;
+    animation: fall 4s linear forwards;
+}
+
+@keyframes fall {
+    0% { top: -30px; }
+    100% { top: 100%; } /* Coins stop at 80% of the screen height */
+}
